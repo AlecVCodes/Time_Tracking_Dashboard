@@ -23,16 +23,23 @@
   <body>
     <main id="time-tracking-container">
       <aside>
-        <img src="images/image-jeremy.png" alt="user image" />
         <div class="user-details">
-          <span>Report for</span>
-          <h1>Jeremy Robson</h1>
-          <ul class="tracking-options">
-            <li>Daily</li>
-            <li>Weekly</li>
-            <li>Monthly</li>
-          </ul>
+          <img
+            src="images/image-jeremy.png"
+            width="78px"
+            height="78px"
+            alt="user image"
+          />
+          <div class="user-text">
+            <span>Report for</span>
+            <h1>Jeremy Robson</h1>
+          </div>
         </div>
+        <ul class="tracking-options">
+          <li class="daily-option">Daily</li>
+          <li class="weekly-option">Weekly</li>
+          <li class="monthly-option">Monthly</li>
+        </ul>
       </aside>
       <div class="time-tracking-grid">
         <article class="time-tracking-card">
@@ -51,11 +58,20 @@
             </svg>
           </div>
           <div class="time-tracking-text">
-            <div>
+            <div class="card-heading">
               <h2>Work</h2>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
-            <p class="current-time-spent"></p>
-            <p class="previous-time-spent"></p>
+            <div class="card-tracking-stats">
+              <p class="current-time-spent">5hrs</p>
+              <p class="previous-time-spent">Last Week - 7hrs</p>
+            </div>
           </div>
         </article>
         <article class="time-tracking-card">
@@ -74,11 +90,20 @@
             </svg>
           </div>
           <div class="time-tracking-text">
-            <div>
+            <div class="card-heading">
               <h2>Play</h2>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
-            <p class="current-time-spent"></p>
-            <p class="previous-time-spent"></p>
+            <div class="card-tracking-stats">
+              <p class="current-time-spent">1hrs</p>
+              <p class="previous-time-spent">Last Week - 2hrs</p>
+            </div>
           </div>
         </article>
         <article class="time-tracking-card">
@@ -97,11 +122,20 @@
             </svg>
           </div>
           <div class="time-tracking-text">
-            <div>
+            <div class="card-heading">
               <h2>Study</h2>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
-            <p class="current-time-spent"></p>
-            <p class="previous-time-spent"></p>
+            <div class="card-tracking-stats">
+              <p class="current-time-spent">0hrs</p>
+              <p class="previous-time-spent">Last Week - 1hrs</p>
+            </div>
           </div>
         </article>
         <article class="time-tracking-card">
@@ -115,11 +149,20 @@
             </svg>
           </div>
           <div class="time-tracking-text">
-            <div>
+            <div class="card-heading">
               <h2>Exercise</h2>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
-            <p class="current-time-spent"></p>
-            <p class="previous-time-spent"></p>
+            <div class="card-tracking-stats">
+              <p class="current-time-spent">1hrs</p>
+              <p class="previous-time-spent">Last Week - 1hrs</p>
+            </div>
           </div>
         </article>
         <article class="time-tracking-card">
@@ -133,11 +176,20 @@
             </svg>
           </div>
           <div class="time-tracking-text">
-            <div>
+            <div class="card-heading">
               <h2>Social</h2>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
-            <p class="current-time-spent"></p>
-            <p class="previous-time-spent"></p>
+            <div class="card-tracking-stats">
+              <p class="current-time-spent">1hrs</p>
+              <p class="previous-time-spent">Last Week - 3hrs</p>
+            </div>
           </div>
         </article>
         <article class="time-tracking-card">
@@ -151,14 +203,24 @@
             </svg>
           </div>
           <div class="time-tracking-text">
-            <div>
+            <div class="card-heading">
               <h2>Self Care</h2>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
-            <p class="current-time-spent"></p>
-            <p class="previous-time-spent"></p>
+            <div class="card-tracking-stats">
+              <p class="current-time-spent">0hrs</p>
+              <p class="previous-time-spent">Last Week - 1hrs</p>
+            </div>
           </div>
         </article>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
