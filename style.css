@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+/* custom properties */
+
+:root {
+  /* colours */
+  --white: #fff;
+  --black: #000;
+  --navy-950: #0e1323;
+  --navy-900: #1c204b;
+  --navy-800: #33397a;
+  --navy-200: #bbc0ff;
+  --orange: #ff8b64;
+  --purple-700: #7335d2;
+  --purple-600: #5747ea;
+  --purple-500: #7078c9;
+  --blue-300: #55c2e6;
+  --pink-400: #ff5e7d;
+  --green-400: #4bcf82;
+  --yellow-300: #f1c75b;
+  --grey-200: #d8d8d8;
+}
+
+/* card decorations */
+
+.time-tracking-decoration {
+}
+
+.time-tracking-card:nth-of-type(1) > .time-tracking-decoration {
+  background-color: var(--orange);
+}
+.time-tracking-card:nth-of-type(2) > .time-tracking-decoration {
+  background-color: var(--blue-300);
+}
+.time-tracking-card:nth-of-type(3) > .time-tracking-decoration {
+  background-color: var(--pink-400);
+}
+.time-tracking-card:nth-of-type(4) > .time-tracking-decoration {
+  background-color: var(--green-400);
+}
+.time-tracking-card:nth-of-type(5) > .time-tracking-decoration {
+  background-color: var(--purple-700);
+}
+.time-tracking-card:nth-of-type(6) > .time-tracking-decoration {
+  background-color: var(--yellow-300);
+}
