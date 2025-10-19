@@ -43,7 +43,7 @@ body {
 
 h1 {
   color: var(--white);
-  font-size: clamp(1.4rem, 7vw, 3rem);
+  font-size: clamp(1.4rem, 7vw, 2.5rem);
   font-weight: 200;
   margin-top: 0.8rem;
 }
@@ -55,12 +55,14 @@ main {
   display: flex;
   width: 90%;
   margin: 2rem auto;
+  position: relative;
 }
 /* aside */
 aside {
   background-color: var(--navy-900);
   margin-bottom: 2rem;
   border-radius: 15px;
+  position: relative;
 }
 
 .user-details {
@@ -94,17 +96,24 @@ aside {
 
 .tracking-options > li {
   color: var(--purple-500);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   margin: auto;
   padding: 1rem;
   cursor: pointer;
 }
+
+/* set active option */
+
+.tracking-options > li.active {
+  color: var(--white);
+}
+
 /* cards */
 
 .time-tracking-grid {
   max-width: 830px;
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
 }
 
@@ -146,11 +155,17 @@ aside {
 
 .time-tracking-text {
   overflow: hidden;
-  width: 100;
+  height: 100%;
   position: relative;
   padding: 1.5rem;
   border-radius: 15px;
   background-color: var(--navy-900);
+  transition: all 200ms ease;
+}
+
+.time-tracking-text:focus,
+.time-tracking-text:hover {
+  background-color: var(--navy-800);
 }
 
 .card-tracking-stats {
@@ -221,6 +236,7 @@ h2 {
 
   .time-tracking-grid {
     grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+    gap: 1.5rem;
   }
   .card-heading {
     margin-bottom: 1rem;
@@ -238,9 +254,11 @@ h2 {
 
 @media (min-width: 90em) {
   main {
-    max-width: 1200px;
+    max-width: 1116px;
     flex-direction: row;
     margin: 10rem auto;
+
+    max-height: 520px;
   }
 
   /* aside */
@@ -250,8 +268,43 @@ h2 {
     margin-right: 2rem;
   }
 
+  .tracking-options {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    height: 30%;
+    border-radius: 0px;
+  }
+
+  .tracking-options > li {
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .user-details {
+    width: 255px;
+    display: block;
+  }
+
+  .user-text {
+    margin-top: 2.5rem;
+  }
+
+  h1 {
+    max-width: 5ch;
+    margin-top: 0.5rem;
+  }
+
+  .tracking-options {
+    flex-direction: column;
+  }
+  /* tracking grid */
+
   .time-tracking-grid {
     grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  }
+
+  .time-tracking-text {
+    padding: 2rem;
   }
 
   .time-tracking-decoration {

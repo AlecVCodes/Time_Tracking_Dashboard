@@ -6,6 +6,7 @@ const dailyTrackingBtn = document.querySelector(".daily-option");
 const weeklyTrackingBtn = document.querySelector(".weekly-option");
 const monthlyTrackingBtn = document.querySelector(".monthly-option");
 
+let trackingOptions = [dailyTrackingBtn, weeklyTrackingBtn, monthlyTrackingBtn];
 // get stat values from HTML
 
 let currentHours = document.querySelectorAll(".current-time-spent");
@@ -25,21 +26,41 @@ fetch("/data.json")
     json = data;
 
     dailyTrackingBtn.addEventListener("click", (e) => {
+      //set as active state
+      activeOption(dailyTrackingBtn);
+
       let dailyOptions = json.map(({ timeframes }) => timeframes.daily);
       console.log(dailyOptions, "dailyOptions");
       passData(dailyOptions);
     });
 
     weeklyTrackingBtn.addEventListener("click", (e) => {
+      //set as active state
+      activeOption(weeklyTrackingBtn);
+
       let weeklyOptions = json.map(({ timeframes }) => timeframes.weekly);
       passData(weeklyOptions);
     });
 
     monthlyTrackingBtn.addEventListener("click", (e) => {
+      //set as active state
+      activeOption(monthlyTrackingBtn);
+
       let monthlyOptions = json.map(({ timeframes }) => timeframes.monthly);
       passData(monthlyOptions);
     });
   });
+
+// change active option
+
+function activeOption(trackingOption) {
+  //remove class from whatever option has the active state
+  trackingOptions.forEach((option) => {
+    option.classList.remove("active");
+  });
+
+  trackingOption.classList.add("active");
+}
 
 //pass through the data and add it to UI
 function passData(options) {
@@ -62,4 +83,3 @@ function passData(options) {
     previousHour.innerText = `Last Week - ${previousValues[index]}hrs`;
   });
 }
-    
