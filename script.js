@@ -14,7 +14,7 @@ let previousHours = document.querySelectorAll(".previous-time-spent");
 
 console.log(currentHours, "current hours");
 console.log(previousHours, "Previous hours");
-fetch("./data.json")
+fetch("data.json")
   .then((response) => {
     if (!response.ok) return console.log("Error");
 
